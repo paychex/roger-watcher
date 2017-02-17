@@ -73,6 +73,9 @@ var PUDIM = window.PUDIM = (function() {
 							label = params.utc + "%20%3E%20" + params.utv + "%20%3E%20" + params.utl + "%20%3E%20" + params.utt;
 							// color = "#A66F00";
 							break;
+						case "exception":
+							label = params.exd;
+							break;
 					}
 
 					errors = this.parseByType(['all', params], [params.t, params]);
