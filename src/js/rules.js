@@ -1,10 +1,10 @@
 window.commonRules = {
 	regex: {
-		universal_analytics_url: /^https?:\/\/(www\.)?google-analytics.com\/collect\??/i,
+		universal_analytics_url: /^https?:\/\/(www\.)?google-analytics.com\//i,
 		trackingID: /^UA\-\d+\-\d{1,2}$/
 	},
 	universal_analytics: function(url) {
-		return url.indexOf('google-analytics.com/collect') >= 0;
+		return url.indexOf('google-analytics.com') >= 0;
 	},
 	universal_analytics_url: function(url) {
 		return this.regex.universal_analytics_url.test(url);
